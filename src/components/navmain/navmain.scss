@@ -1,0 +1,25 @@
+div.nav-main {
+    border: 1px solid white;
+    border-radius: 7px;
+    padding: 12px;
+    text-align: center;
+    justify-content: center;
+    background: white;
+    .nav-item {
+        border-right: 1px solid green;
+        padding: 0 20px;
+        &:last-child {
+            border: none;
+        }
+    }
+    a {
+        color: green;
+        font-weight: bold;
+        &.is-active,
+        &:hover {
+            color: orange;
+            text-decoration: none;
+        }
+        font-size: 20px;
+    }
+}
