@@ -1,0 +1,42 @@
+[
+    {
+        "Ubicación": "Infantas",
+        "costo_por_hora": 60,
+        "direccion": "Jr. Los Hornos 456",
+        "distrito": "Los Olivos",
+        "id": 1,
+        "jugadores_por_equipo": 7,
+        "nombre": "La Bombonera",
+        "teléfono": "987654321"
+    },
+    {
+        "Ubicación": "Trapiche",
+        "costo_por_hora": 70,
+        "direccion": "Av. Trapiche 1086",
+        "distrito": "Comas",
+        "id": 2,
+        "jugadores_por_equipo": 7,
+        "nombre": "La 10",
+        "teléfono": "123456789"
+    },
+    {
+        "Ubicación": "Trapiche",
+        "costo_por_hora": 75,
+        "direccion": "Av. Trapiche 567",
+        "distrito": "Comas",
+        "id": 3,
+        "jugadores_por_equipo": 9,
+        "nombre": "Peloteropolis",
+        "teléfono": "987654321"
+    },
+    {
+        "Ubicación": "Santa Luzmila",
+        "costo_por_hora": 70,
+        "direccion": "Jr. Corbacho 432",
+        "distrito": "Comas",
+        "id": 4,
+        "jugadores_por_equipo": 6,
+        "nombre": "Salazar Bondy",
+        "teléfono": "123456"
+    }
+]

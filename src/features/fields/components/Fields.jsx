@@ -1,4 +1,6 @@
 import React from "react";
+import jsonCanchas from "./jobs_cancha.json"
+import Table from 'react-bootstrap/Table'
 
 class Field extends React.Component {
   constructor(props) {
@@ -6,25 +8,14 @@ class Field extends React.Component {
     this.state = {
       fields: []
     }
+
+    console.log("jsonCanchas", this.state.fields)
   }
 
   componentDidMount() {
-    // peticion a servidor para traer todos los juegos
+    // peticion a servidor para traer todas las canchas
     this.setState({
-      fields: [
-        {
-          id: 1,
-          nombre: "field 1"
-        },
-        {
-          id: 2,
-          nombre: "field 2"
-        },
-        {
-          id: 3,
-          nombre: "field 3"
-        }
-      ]
+      fields: jsonCanchas    
     })
   }
 
@@ -33,12 +24,35 @@ class Field extends React.Component {
   }
 
   render() {
-    let fields = this.state.fields.map((field) => <h1 onClick={() => this.handleRedirect(field)} key={field.id}>{field.nombre}</h1>)
+    // let fields = this.state.fields.map((field) => <h1 onClick={() => this.handleRedirect(field)} key={field.id}>{field.nombre}</h1>)
 
-    console.log("fields", fields)
+    // console.log("fields", fields)
+    // return (
+    //   <div>
+    //     {fields}
+    //   </div>
+    // )
+    let rows = this.state.fields.map((field) => <tr onClick={() => this.handleRedirect(field)} key={field.id}>
+      <td>{field.nombre}</td><td>{field.distrito}</td><td>{field.teléfono}</td><td>{field.costo_por_hora}</td><td>{field.jugadores_por_equipo}</td>
+    </tr>)
     return (
       <div>
-        {fields}
+        {/* <Field /> */}
+        <Table responsive striped bordered hover>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Distrito</th>
+              <th>Teléfono</th>
+              <th>Costo por hora</th>
+              <th>Jugadores por equipo</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows}
+          </tbody>
+        </Table>
+        {/* {games} */}
       </div>
     )
   }

@@ -11,20 +11,27 @@ class Games extends React.Component {
 
   componentDidMount() {
     // peticion a servidor para traer todos los juegos
+
     this.setState({
       games: [
         {
           id: 1,
-          nombre: "juego 1"
+          firstname: "juego 1",
+          lastname: "yabiku",
+          username: "syabiku"
         },
         {
           id: 2,
-          nombre: "juego 2"
+          firstname: "juego 2",
+          lastname: "yabiku",
+          username: "syabiku"
         },
         {
           id: 3,
-          nombre: "juego 3"
-        }
+          firstname: "juego 3",
+          lastname: "yabiku",
+          username: "syabiku"
+        },
       ]
     })
   }
@@ -34,7 +41,9 @@ class Games extends React.Component {
   }
 
   render() {
-    // let games = this.state.games.map((game) => <h1 onClick={() => this.handleRedirect(game)} key={game.id}>{game.nombre}</h1>)
+    let rows = this.state.games.map((game) => <tr onClick={() => this.handleRedirect(game)} key={game.id}>
+      <td>{game.id}</td><td>{game.frstname}</td><td>{game.lastname}</td><td>{game.username}</td>
+    </tr>)
     return (
       <div>
         {/* <Field /> */}
@@ -48,23 +57,7 @@ class Games extends React.Component {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td colSpan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+            {rows}
           </tbody>
         </Table>
         {/* {games} */}
