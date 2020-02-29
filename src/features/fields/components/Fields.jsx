@@ -14,9 +14,20 @@ class Field extends React.Component {
 
   componentDidMount() {
     // peticion a servidor para traer todas las canchas
-    this.setState({
-      fields: jsonCanchas    
-    })
+    //this.setState({
+    //  fields: jsonCanchas    
+    //})
+    // fetch("http://127.0.0.1:8000/canchaslist/")
+    //   .then((response) => response.json())
+    //   .then ((value) => {
+    //     let {results: fields} = value;
+    //     this.setState((state,props) => ({
+    //       fields
+    //     }));
+    //   })
+    fetch("http://127.0.0.1:8000/canchaslist/")
+      .then(res => res.json())
+      .then(json => this.setState({ fields: json }));
   }
 
   handleRedirect(field) {
@@ -57,7 +68,6 @@ class Field extends React.Component {
     )
   }
 }
-
 export {
   Field
 }
