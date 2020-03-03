@@ -1,6 +1,7 @@
 import React from "react";
 import Table from 'react-bootstrap/Table'
-import { Field } from "../..";
+//import { Field } from "../..";
+
 class Games extends React.Component {
   constructor(props) {
     super(props);
@@ -10,30 +11,9 @@ class Games extends React.Component {
   }
 
   componentDidMount() {
-    // peticion a servidor para traer todos los juegos
-
-    this.setState({
-      games: [
-        {
-          id: 1,
-          firstname: "juego 1",
-          lastname: "yabiku",
-          username: "syabiku"
-        },
-        {
-          id: 2,
-          firstname: "juego 2",
-          lastname: "yabiku",
-          username: "syabiku"
-        },
-        {
-          id: 3,
-          firstname: "juego 3",
-          lastname: "yabiku",
-          username: "syabiku"
-        },
-      ]
-    })
+    fetch("http://127.0.0.1:8000/juegoslist/")
+      .then(response => response.json())
+      .then(json => this.setState({ games: json }));
   }
 
   handleRedirect(game) {
@@ -42,7 +22,7 @@ class Games extends React.Component {
 
   render() {
     let rows = this.state.games.map((game) => <tr onClick={() => this.handleRedirect(game)} key={game.id}>
-      <td>{game.id}</td><td>{game.frstname}</td><td>{game.lastname}</td><td>{game.username}</td>
+      <td>{game.cancha.nombre}</td><td>{game.fecha}</td><td>{game.hora}</td><td>{game.cancha.distrito}</td><td>{game.cancha.costo_por_hora}</td><td>{game.jugadores.length}</td>
     </tr>)
     return (
       <div>
@@ -50,10 +30,12 @@ class Games extends React.Component {
         <Table responsive striped bordered hover>
           <thead>
             <tr>
-              <th>#</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Username</th>
+              <th>Cancha</th>
+              <th>Fecha</th>
+              <th>Hora</th>
+              <th>Distrito</th>
+              <th>Costo/Hora</th>
+              <th>Inscrit@s</th>
             </tr>
           </thead>
           <tbody>

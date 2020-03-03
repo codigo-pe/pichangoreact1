@@ -26,7 +26,7 @@ class Field extends React.Component {
     //     }));
     //   })
     fetch("http://127.0.0.1:8000/canchaslist/")
-      .then(res => res.json())
+      .then(response => response.json())
       .then(json => this.setState({ fields: json }));
   }
 
@@ -46,6 +46,7 @@ class Field extends React.Component {
     let rows = this.state.fields.map((field) => <tr onClick={() => this.handleRedirect(field)} key={field.id}>
       <td>{field.nombre}</td><td>{field.distrito}</td><td>{field.teléfono}</td><td>{field.costo_por_hora}</td><td>{field.jugadores_por_equipo}</td>
     </tr>)
+    console.log('prueba de estado',this.state)
     return (
       <div>
         {/* <Field /> */}
