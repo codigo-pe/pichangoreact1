@@ -1,6 +1,7 @@
 import React from "react";
 import jsonCanchas from "./jobs_cancha.json"
 import Table from 'react-bootstrap/Table'
+import "./fields.scss";
 
 class Field extends React.Component {
   constructor(props) {
@@ -52,7 +53,7 @@ class Field extends React.Component {
         {/* <Field /> */}
         <Table responsive striped bordered hover>
           <thead>
-            <tr>
+            <tr className="green">
               <th>Nombre</th>
               <th>Distrito</th>
               <th>Teléfono</th>

@@ -2,6 +2,8 @@ import React from "react";
 import Table from 'react-bootstrap/Table'
 //import { Field } from "../..";
 
+import "./Gamescontainer.scss";
+
 class Games extends React.Component {
   constructor(props) {
     super(props);
@@ -31,7 +33,7 @@ class Games extends React.Component {
         {/* <Field /> */}
         <Table responsive striped bordered hover>
           <thead>
-            <tr>
+            <tr className="orange">
               <th>Cancha</th>
               <th>Fecha</th>
               <th>Hora</th>
