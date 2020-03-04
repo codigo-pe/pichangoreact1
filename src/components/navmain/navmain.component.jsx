@@ -18,10 +18,13 @@ function NavMain(props) {
       onSelect={selectedKey => alert(`selected ${selectedKey}`)}
     >
       <Nav.Item>
-        <NavLink activeClassName="is-active" to="/games">Games</NavLink>
+        <NavLink activeClassName="is-active" to="/games">Juegos</NavLink>
       </Nav.Item>
       <Nav.Item>
-        <NavLink activeClassName="is-active" to="/fields">Fields</NavLink>
+        <NavLink activeClassName="is-active" to="/fields">Canchas</NavLink>
+      </Nav.Item>
+      <Nav.Item>
+        <NavLink activeClassName="is-active" to="/Creategame">Crea un juego</NavLink>
       </Nav.Item>
     </Nav>
   )
