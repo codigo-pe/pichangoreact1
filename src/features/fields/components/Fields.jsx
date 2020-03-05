@@ -49,6 +49,7 @@ class Field extends React.Component {
     return (
       <div>
         {/* <Field /> */}
+        <h3>Canchas registradas en pichanGO</h3>
         <Table responsive striped bordered hover>
           <thead>
             <tr className="green">

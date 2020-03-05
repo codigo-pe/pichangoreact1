@@ -7,7 +7,7 @@ function Header(props) {
   return (
     <header className="header d-flex align-items-center justify-content-between">
       <div className="header__left">
-        <a className="header__logo" href="">
+        <a className="header__logo" href="./#/landing">
           <img src={Logo} />
         </a>
         <NavMain />
