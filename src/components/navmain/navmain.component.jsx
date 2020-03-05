@@ -24,7 +24,7 @@ function NavMain(props) {
         <NavLink activeClassName="is-active" to="/fields">Canchas</NavLink>
       </Nav.Item>
       <Nav.Item>
-        <NavLink activeClassName="is-active" to="/Creategame">Crea un juego</NavLink>
+        <NavLink activeClassName="is-active" to="/register-game">Crea un juego</NavLink>
       </Nav.Item>
     </Nav>
   )
