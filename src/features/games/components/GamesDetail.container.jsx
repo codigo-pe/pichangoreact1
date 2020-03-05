@@ -1,7 +1,10 @@
 import React from "react";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Button from "react-bootstrap/Button";
-import Table from "react-bootstrap/Table";
+import Table from 'react-bootstrap/Table';
+import Tab from 'react-bootstrap/Tab'
+import Tabs from 'react-bootstrap/Tabs'
+import mapa from "../../../assets/images/cancha01mapa.jpg"
 
 class GamesDetail extends React.Component {
   constructor(props) {
@@ -70,43 +73,56 @@ class GamesDetail extends React.Component {
     let juego = this.state.detail
     let rows = juego.jugadores.map(jugador =>
       <tr>
-      <td>{jugador.usuario.first_name} {jugador.usuario.last_name}</td>
-      <td>{jugador.distrito}</td>
-      <td>{jugador.posicion}</td>
-      <td>{jugador.descripcion}</td>
+        <td>{jugador.usuario.first_name} {jugador.usuario.last_name}</td>
+        <td>{jugador.distrito}</td>
+        <td>{jugador.posicion}</td>
+        <td>{jugador.descripcion}</td>
       </tr>)
     return (
-      <div>
-        <Jumbotron>
-          <h1>{juego.cancha.nombre}</h1>
-          <p>
-            <span>
-              ¿Cuándo? {juego.fecha} | {juego.hora}
-            </span>
-          </p>
-          <p>
-            <span>
-              ¿Dónde? {juego.cancha.direccion} | {juego.cancha.distrito}
-            </span>
-          </p>
-          <p>{juego.descripcion}</p>
-          <p>
-            <Button variant="primary">Inscribirse</Button>
-          </p>
-          <p>Pichanguer@s inscritos:</p>
-          <table className="table table-sm table-dark">
-            <thead>
-              <tr>
-                <th scope="col">Pichanguer@</th>
-                <th scope="col">Distrito</th>
-                <th scope="col">Posición</th>
-                <th scope="col">Descripción</th>
-              </tr>
-            </thead>
-            <tbody>{rows}</tbody>
-          </table>
-        </Jumbotron>
+      <React.Fragment>
+      <div className="container">
+        <h1>{juego.cancha.nombre}</h1>
+        <Tabs defaultActiveKey="home" transition={false} id="noanim-tab-example">
+              <Tab eventKey="home" title="Jugadores Inscritos" >
+              <Table responsive striped bordered hover variant="light">
+                  <thead>
+                    <tr>
+                      <th scope="col">Pichanguer@</th>
+                      <th scope="col">Distrito</th>
+                      <th scope="col">Posición</th>
+                      <th scope="col">Descripción</th>
+                      <th><Button variant="primary">Unirse al Juego</Button></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {rows}
+                  </tbody>
+                </Table>
+              </Tab>
+              <Tab eventKey="profile" title="Info del Juego">
+                <p style={{fontWeight:'bolder'}}>Fecha {juego.fecha} </p>
+                <p style={{fontWeight:'bolder'}}>Hora: {juego.hora}</p>
+                <p>Dirección: {juego.cancha.direccion} </p>
+                <p> Distrito: {juego.cancha.distrito}</p>
+                <p> Descripción del Juego: {juego.descripcion}</p>
+                <p style={{color:'green'}}>
+                  Incluye: Chalecos, Pelotas
+                  Tribuna: Para 100 personas y Areas sociales.
+                  <br/>
+                  Estacionamiento interno: Para 100 vehículos, vigilado.
+                  Servicios higiénicos: Damas y Caballeros
+                  <br/>
+                  Términos y condiciones:
+                  Para reservar su cancha debe seleccionar el horario disponible (verde) e ingresar sus datos.
+                  Para confirmar su reserva debe realizar el depósito bancario en un plazo máximo de 12 horas.
+                </p>
+              </Tab>
+              <Tab eventKey="contact"  title="Mapa">   
+                <img src={mapa} alt="" style = {{margin : '20px'}}/>
+              </Tab>
+        </Tabs>
       </div>
+      </React.Fragment>
     );
   }
 }

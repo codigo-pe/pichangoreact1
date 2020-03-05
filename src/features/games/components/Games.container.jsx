@@ -29,7 +29,7 @@ class Games extends React.Component {
     </tr>)
     return (
       <div>
-        <h3>Estos son los juegos creados en pichanGO</h3>
+        <h3>Revisa todos nuestros juegos</h3>
         {/* <Field /> */}
         <Table responsive striped bordered hover>
           <thead>

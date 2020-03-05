@@ -7,7 +7,18 @@
     color: whitesmoke;
     border-radius: 10%;
 }
-h3, th{
+
+h3{
     font-family: "Helvetica";
-    font-size: 20px;
-}
+    font-size: 26px;
+    text-align: center;
+    margin: 20px;
+ }
+
+
+th,
+td{
+    font-family: "Helvetica";
+    font-size: 16px;
+    text-align: center;
+ }
