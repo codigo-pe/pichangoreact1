@@ -20,7 +20,9 @@ function MainRoutes(props) {
     <Switch>
       <Route path="/games" component={GamesRoutes}/>
       <Route path="/fields" component={FieldsRoutes}/>
-      <Route path="/" component={AuthRoutes}/>
+      <Route path="/auth" component={AuthRoutes} />
+      <Route path="/games" component={GamesRoutes} />
+      <Route path="/fields" component={FieldsRoutes} />
       {/* <PrivateRoute path="/products">
         <ProductRoutes />
       </PrivateRoute>

@@ -15,12 +15,13 @@ import {
 
 function AuthRoutes() {
   let { path } = useRouteMatch();
+  console.log("entra acaaaa!!", path)
   return (
     <Switch>
-      <Route path={`/login`} component={AuthLogin}/>
-      <Route path={`/register`} component={AuthRegisterPlayer}/>
-      <Route path={`/register-field`} component={AuthRegisterField}/>
-      <Route path={`/register-game`} component={AuthRegisterGame}/>
+      <Route exact path={`${path}/login`} component={AuthLogin}/>
+      <Route path={`${path}/register`} component={AuthRegisterPlayer}/>
+      <Route path={`${path}/register-field`} component={AuthRegisterField}/>
+      <Route path={`${path}/register-game`} component={AuthRegisterGame}/>
       {/* <Redirect
         to={{
           pathname: "/login"
