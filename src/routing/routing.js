@@ -18,15 +18,9 @@ import {
 function MainRoutes(props) {
   return (
     <Switch>
-      {/* <Route path="/" component={AuthRoutes}/> */}
-      <Route path="/games" component={GamesRoutes}/>
-      <Route path="/fields" component={FieldsRoutes}/>
-      {/* <PrivateRoute path="/products">
-        <ProductRoutes />
-      </PrivateRoute>
-      <PrivateRoute path="/users">
-        <UsersRoutes />
-      </PrivateRoute> */}
+      <Route path="/auth" component={AuthRoutes} />
+      <Route path="/games" component={GamesRoutes} />
+      <Route path="/fields" component={FieldsRoutes} />
     </Switch>
   )
 }

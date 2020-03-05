@@ -1,31 +1,39 @@
 import React from "react";
-import {
-  Link
-} from "react-router-dom";
-import { Nav } from 'react-bootstrap';
-import "./navuser.scss"
+import { Link } from "react-router-dom";
+import { Nav } from "react-bootstrap";
+import { useHistory, useLocation } from "react-router-dom";
+
+import { AppContext } from "../../context";
+
+import "./navuser.scss";
 function NavUser(props) {
-  function handleLogout(e) {
-    e.preventDefault()
-    console.log("loout!!")
+  let history = useHistory();
+  function handleLogout(value) {
+    value.toggleValue(null);
+    sessionStorage.removeItem("user");
+    history.replace("auth/login");
   }
 
   return (
-    <Nav
-      className="nav-user"
-      activeKey="/home"
-      onSelect={selectedKey => alert(`selected ${selectedKey}`)}
-    >
-      <Nav.Item>
-        <Link to="/profile">Bienvenido Gustavo</Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Link to="#" onClick={handleLogout}>Logout</Link>
-      </Nav.Item>
-    </Nav>
-  )
+    <AppContext.Consumer>
+      {value => (
+        <Nav
+          className="nav-user"
+          activeKey="/home"
+          onSelect={selectedKey => alert(`selected ${selectedKey}`)}
+        >
+          <Nav.Item>
+            <Link to="/profile">Bienvenido {value.user.username}</Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Link to="#" onClick={() => handleLogout(value)}>
+              Logout
+            </Link>
+          </Nav.Item>
+        </Nav>
+      )}
+    </AppContext.Consumer>
+  );
 }
 
-export {
-  NavUser
-}
+export { NavUser };
