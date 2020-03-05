@@ -9,8 +9,6 @@ class Field extends React.Component {
     this.state = {
       fields: []
     }
-
-    console.log("jsonCanchas", this.state.fields)
   }
 
   componentDidMount() {
@@ -47,7 +45,7 @@ class Field extends React.Component {
     let rows = this.state.fields.map((field) => <tr onClick={() => this.handleRedirect(field)} key={field.id}>
       <td>{field.nombre}</td><td>{field.distrito}</td><td>{field.teléfono}</td><td>{field.costo_por_hora}</td><td>{field.jugadores_por_equipo}</td>
     </tr>)
-    console.log('prueba de estado',this.state)
+    console.log("prueba de estado","hola!")
     return (
       <div>
         {/* <Field /> */}
