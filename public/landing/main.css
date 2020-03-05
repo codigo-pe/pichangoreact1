@@ -1,0 +1,521 @@
+body {
+    margin:0;
+    padding:0;
+    font-family:"Oswald";
+}
+
+/*header navbar*/
+
+nav {
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height:100px;
+    padding: 0px 100px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+nav.black {
+    background-color: #017b4187;
+    height: 100px;
+    padding: 10px 50px;
+}
+
+nav .logo{
+    float: left;
+}
+
+nav .logo img {
+    height: 120px;
+    transition: .5s;
+}
+
+nav .logo img.logo1{
+    position: absolute;
+    left: 88px;
+    z-index: -1;
+    height: 140px;
+}
+
+nav.black .logo img {
+    height: 80px;
+}
+
+nav.black .logo img.logo1 {
+    left: 40px;
+    height: 90px;
+}
+
+nav ul {
+    float: right;
+    margin:0;
+    padding:0;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    line-height: 80px;
+    color: whitesmoke; 
+    padding: 5px 20px   ;
+    font-family: "Oswald";
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+nav.black ul li a {
+    line-height: 60px;
+    color: #fff;
+}
+
+
+nav ul li a.active, 
+nav ul li a:hover
+{
+    color: #fff;
+    background: green;
+}
+
+/*responsive-header navbar*/
+
+.responsive-bar {
+    display:none;
+}
+
+@media (max-width: 768px)
+{
+    .responsive-bar{
+        display:block;
+        width:100%;
+        height: 100px;
+        background: green ;
+        position:fixed;
+        top:0;
+        left:0;
+        padding: 5px 20px;
+        box-sizing: border-box;
+        z-index: 1;
+    }
+    .responsive-bar .logo img{
+        float: left;
+        height: 80px;
+    }
+
+    .responsive-bar .logo img.logo1{
+        position: absolute;
+        left: 10px;
+        z-index: -1;
+        height: 90px;
+    }
+
+    .responsive-bar .menu h4{
+        float: right;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        line-height: 50px;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+    nav,
+    nav.black {
+        background-color:#262626;
+        height: 60px;
+        padding: 0;
+    }
+    nav .logo {
+        display:none;
+    }
+
+    nav ul {
+        position: absolute;
+        width:100%;
+        top: 60px;
+        left: 0;
+        background: #262626;
+        float: none;
+        display: none;
+    }
+
+    nav ul.active{
+        display: block;
+    }
+     
+    nav ul li { 
+        width: 100%;
+    }
+  
+    nav ul li a{
+        display: block;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+    }
+    
+}
+
+/*banner*/
+
+.banner_part {
+    width:  100%;
+    height: 150vh;
+    background-image:url(./img/kicking-ball.png);
+    background-size: cover;
+    text-align:center;
+    display:table;
+  }
+
+.banner_part h2{
+    font-size: 50px;
+    text-transform: uppercase;
+    color: rgb(44, 44, 44);
+    font-family: "Oswald";
+    margin-top: 90px;
+}
+
+.banner_part h1{
+    font-size: 80px;
+    text-transform: uppercase;
+    color: whitesmoke;
+    font-family: "Oswald";
+}
+
+.banner_part p{
+    margin: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgb(165, 165, 165);
+    font-family: "Oswald";
+    font-weight: bolder;
+}
+
+/* banner responsive */
+
+@media (max-width: 768px){
+
+    .banner_part{
+        height: 70vh;
+    }
+    .banner_part h1{
+        font-size: 50px;
+    }
+}
+
+/*porque elegirnos*/
+
+.elegirnos {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.elegirnos h2{
+    margin: 5px 0 0;
+    padding: 0;
+    font-size: 3rem;
+    font-family:"Oswald";
+    text-align: center;
+    color: green;
+}
+
+.elegirnos p{
+    margin: 20px 0 0;
+    padding: 0;
+    font-size: 1.1rem;
+    color: black;
+    font-family:"Oswald";
+}
+
+/* 1 column: 320px */
+.autowide {
+    margin: 0 auto;
+      width: 98%;
+  }
+  .autowide img {
+    float: left;
+    margin: 0 .75rem 0 0;
+  }
+  .autowide .module {
+    background-color: whitesmoke;
+    border-radius: .25rem;
+    margin-bottom: 1rem;
+  }
+  .autowide .module p {
+    padding: .25rem .75rem;
+  }
+  
+  /* 2 columns: 600px */
+  @media only screen and (min-width: 600px) {
+    .autowide .module {
+          float: left;
+          margin-right: 2.564102564102564%;
+          width: 48.717948717948715%;
+      }
+      .autowide .module:nth-child(2n+0) {
+          margin-right: 0;
+      }
+  }
+  
+  /* 3 columns: 768px */
+  @media only screen and (min-width: 768px) {
+    .autowide .module {
+          width: 31.623931623931625%;
+      }
+      .autowide .module:nth-child(2n+0) {
+          margin-right: 2.564102564102564%;
+      }
+      .autowide .module:nth-child(4n+0) {
+          margin-right: 0;
+      }
+  }
+  
+  /* 4 columns: 992px and up */
+  @media only screen and (min-width: 992px) {
+    .autowide .module {
+          width: 23.076923076923077%;
+      }
+      .autowide .module:nth-child(4n+0) {
+          margin-right: 2.564102564102564%;
+      }
+      .autowide .module:nth-child(4n+0) {
+          margin-right: 0;
+      }
+  }
+
+ /* become a member part here */
+
+.become_member{
+    background-image: url(./img/become_member2_bg.png);
+    width:  100%;
+    height: 80vh;
+    background-size: cover;
+    text-align:center;
+    display:table;
+  }
+
+
+.become_member h2{
+    margin-top: 100px;
+    padding: 0;
+    font-size: 3rem;
+    font-family:"Oswald";
+    text-align: center;
+    color: #fff;
+}
+
+.become_member p{
+    margin: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgb(221, 221, 221);
+    font-family: "Oswald";
+    font-weight: bolder;
+}
+
+.become_member button{
+    display: inline-block;
+    border-radius: 0;
+    font-size: 14px;
+    color: #fff;
+    background-color: #017b4187;
+    transition: all .4s ease-in-out;
+    text-transform: capitalize;
+    background-size: 200% auto;
+    border: 1px solid transparent;
+    padding: 20px 30px;
+    margin-top: 30px;
+}
+
+/*become a member responsive */
+
+@media (max-width: 768px){
+
+    .become_member{
+        height: 70vh;
+    }
+    .become_member h2{
+        font-size: 50px;
+    }
+    .become_member p{
+        font-size: 15px;
+    }
+}
+
+/* footer*/
+
+/* The footer is fixed to the bottom of the page */
+ 
+footer{
+	position: fixed;
+    bottom: 0;
+    background-color: #004222f5;
+}
+ 
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:0px; }
+}
+ 
+.footer-distributed{
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: normal 16px "Oswald";
+	padding: 50px 50px 60px 50px;
+}
+ 
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+ 
+/* Footer left */
+ 
+.footer-distributed .footer-left{
+	width: 30%;
+}
+ 
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px "Oswald";
+	margin: 0;
+}
+
+/* Footer links */
+ 
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+ 
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+ 
+.footer-distributed .footer-company-name{
+	color:  green;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+/* Footer Center */
+ 
+.footer-distributed .footer-center{
+	width: 35%;
+}
+ 
+.footer-distributed .footer-center i{
+	background-color:  #017b4187;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+ 
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+ 
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+ 
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+ 
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+ 
+ 
+/* Footer Right */
+ 
+.footer-distributed .footer-right{
+	width: 30%;
+}
+ 
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #fff;
+	font-size: 15px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #e0ac1c;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+    
+.footer-distributed .footer-icons{
+	margin-top: 40px;
+}
+ 
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  green;
+	border-radius: 2px;
+ 
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+ 
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+ 
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+ 
+ 
+@media (max-width: 880px) {
+ 
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+ 
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+ 
+}
