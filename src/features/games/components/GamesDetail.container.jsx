@@ -6,6 +6,8 @@ import Tab from 'react-bootstrap/Tab'
 import Tabs from 'react-bootstrap/Tabs'
 import mapa from "../../../assets/images/cancha01mapa.jpg"
 
+import "./gamesDetail.scss";
+
 class GamesDetail extends React.Component {
   constructor(props) {
     super(props);
@@ -87,10 +89,10 @@ class GamesDetail extends React.Component {
               <Table responsive striped bordered hover variant="light">
                   <thead>
                     <tr>
-                      <th scope="col">Pichanguer@</th>
-                      <th scope="col">Distrito</th>
-                      <th scope="col">Posición</th>
-                      <th scope="col">Descripción</th>
+                      <th className="blue" scope="col" >Pichanguer@</th>
+                      <th className="blue" scope="col">Distrito</th>
+                      <th className="blue" scope="col">Posición</th>
+                      <th className="blue" scope="col">Descripción</th>
                       <th><Button variant="primary">Unirse al Juego</Button></th>
                     </tr>
                   </thead>

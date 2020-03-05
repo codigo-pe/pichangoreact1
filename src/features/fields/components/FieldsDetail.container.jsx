@@ -35,7 +35,7 @@ class FieldDetail extends React.Component {
       <React.Fragment>
         <div className="container">
             <h1>{this.state.detail.nombre}</h1>  
-            <div className="card">    
+            <div>    
             </div>
             <div>
             <Tabs defaultActiveKey="home" transition={false} id="noanim-tab-example">
