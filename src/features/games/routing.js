@@ -9,7 +9,7 @@ import {
   Games,
   ProductCreate,
   ProductEdit,
-  GamesDetail
+  GamesDetail,
 } from "./components";
 
 function GamesRoutes() {
