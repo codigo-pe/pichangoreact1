@@ -43,6 +43,7 @@ class AuthLogin extends React.Component {
       });
     };
 
+    // llamada asincrona al servidor
     isLogin()
       .then(user => {
         this.context.toggleValue(user);

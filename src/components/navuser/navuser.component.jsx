@@ -11,7 +11,7 @@ function NavUser(props) {
   function handleLogout(value) {
     value.toggleValue(null);
     sessionStorage.removeItem("user");
-    history.replace("auth/login");
+    history.replace("/auth/login");
   }
 
   return (

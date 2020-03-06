@@ -16,7 +16,7 @@ function GamesRoutes() {
   let { path } = useRouteMatch();
   return (
     <Switch>
-      <Route path={`${path}`} component={Games}/>
+      <Route exact path={`${path}`} component={Games}/>
       <Route path={`${path}/:id`} component={GamesDetail}/>
       {/* <Route path={`${path}/edit`}>
         <ProductEdit />

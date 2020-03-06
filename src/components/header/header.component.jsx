@@ -28,7 +28,7 @@ class Header extends React.Component {
             <NavUser />
           ) : (
             <>
-              <Link to="/auth/register">Registrarse</Link>&nbsp;&nbsp;&nbsp;
+              {/* <Link to="/auth/register">Registrarse</Link>&nbsp;&nbsp;&nbsp; */}
               <Link to="/auth/login">Loguearse</Link>
             </>
           )}
