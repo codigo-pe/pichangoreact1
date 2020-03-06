@@ -83,7 +83,7 @@ class GamesDetail extends React.Component {
     return (
       <React.Fragment>
       <div className="container">
-        <h1>Pichanga en {juego.cancha.nombre}</h1>
+        <h3>Pichanga en {juego.cancha.nombre}</h3>
         <Tabs defaultActiveKey="home" transition={false} id="noanim-tab-example">
               <Tab eventKey="home" title="Jugadores Inscritos" >
               <Table responsive striped bordered hover variant="light">

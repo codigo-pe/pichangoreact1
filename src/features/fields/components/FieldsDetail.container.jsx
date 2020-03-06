@@ -6,7 +6,7 @@ import Table from "react-bootstrap/Table";
 
 import "./fieldsdetail.scss";
 
-import cancha from "../../../assets/images/cancha01.jpg";
+import imgcancha from "../../../assets/images/cancha01.jpg";
 import mapa from "../../../assets/images/cancha01mapa.jpg";
 
 //import jsonCanchas from "./jobs_cancha.json"
@@ -59,7 +59,7 @@ class FieldDetail extends React.Component {
     return (
       <React.Fragment>
         <div className="container">
-          <h1>{cancha.nombre}</h1>
+          <h3>{cancha.nombre}</h3>
           <div></div>
           <div>
             <Tabs
@@ -74,7 +74,7 @@ class FieldDetail extends React.Component {
                 <p>Teléfono: {cancha.teléfono}</p>
                 <p>Costo por hora: {cancha.costo_por_hora}</p>
                 <p>Jugadores por equipo: {cancha.jugadores_por_equipo}</p>
-                <img className="center" src={cancha} alt="" />
+                <img className="center" src={imgcancha} alt="" />
               </Tab>
               <Tab eventKey="profile" title="Mapa">
                 <img src={mapa} alt="" style={{ margin: "20px" }} />

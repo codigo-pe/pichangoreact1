@@ -8,7 +8,9 @@ import {
 import {
   FieldsRoutes,
   GamesRoutes,
-  AuthRoutes
+  AuthRoutes,
+  LandingRoutes,
+  Landing,
 } from "../features";
 
 import {
@@ -18,6 +20,7 @@ import {
 function MainRoutes(props) {
   return (
     <Switch>
+      <Route path="/landing" component={Landing}/>
       <Route path="/games" component={GamesRoutes}/>
       <Route path="/fields" component={FieldsRoutes}/>
       <Route path="/auth" component={AuthRoutes} />
