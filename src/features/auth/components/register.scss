@@ -1,0 +1,67 @@
+.register {
+    border: 1px solid #cdcdcd;
+    border-radius: 5%;
+    padding: 20px;
+    max-width: 340px;
+    margin: 50px auto 50px;
+    background:linear-gradient(to left, rgb(1, 156, 9), #02f302);
+  
+    h1 {
+      margin-bottom: 20px;
+      color: #fff;
+    }
+  
+    input {
+      width: 100%;
+      border: 1px solid #cdcdcd;
+      padding: 10px 38px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+  
+      &:focus {
+        outline: none;
+      }
+    }
+  
+    button {
+      background: linear-gradient(to left, rgb(1, 156, 9), #0f9b0f);
+      padding: 10px;
+      border: 1px solid #fff;
+      font-size: 18px;
+      color: white;
+      font-weight: bold;
+      margin: auto;
+      width: 150px;
+      display: block;
+      font-family: "Helvetica";
+      border-radius: 4%;
+    }
+    .icon1,.icon2,.icon3,.icon4,.icon5{
+        position: absolute;
+        left: 51px;
+        font-size: 18px;
+        color: green;
+        width: 22px;
+    }
+
+    .icon1{
+        top: 305px;
+        left:540px;
+    }
+    .icon2 {
+        top: 365px;
+        left:540px;
+    }
+    .icon3 {
+         top: 427px;
+         left:540px; 
+    }
+    .icon4 {
+        top: 485px;
+        left:540px;
+    }
+    .icon5 {
+        top: 545px;
+        left:540px;
+      }
+  }

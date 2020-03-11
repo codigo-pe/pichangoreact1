@@ -70,21 +70,20 @@ class AuthLogin extends React.Component {
   render() {
     return (
       <form className="login" onSubmit={this.handleSubmit}>
-        <h1>Login</h1>
+        <h1><span class="icon"><i class="fa fa-futbol" aria-hidden="true"></i></span>  Iniciar Sesión</h1>
         <input
           name="username"
           type="text"
-          placeholder="Usuario"
+          placeholder="Correo electrónico"
           value={this.state.username}
           onChange={this.handleChange}
-        />
-        <input
-          name="password"
+        /><span class="icon1"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+        <input name="password"
           type="password"
           placeholder="Password"
           value={this.state.password}
           onChange={this.handleChange}
-        />
+        /><span class="icon5"><i class="fa fa-unlock" aria-hidden="true"></i></span>
         <button>Enviar</button>
       </form>
     );

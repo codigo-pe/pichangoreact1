@@ -2,18 +2,22 @@
   border: 1px solid #cdcdcd;
   padding: 20px;
   max-width: 340px;
-  margin: 50px auto 0;
+  margin: 50px auto 50px;
+  border-radius: 5%;
+  background:linear-gradient(to right, rgb(1, 156, 9), #02f302);;
 
   h1 {
     margin-bottom: 20px;
+    color: #fff;
   }
 
   input {
     width: 100%;
     border: 1px solid #cdcdcd;
-    padding: 10px;
+    padding: 10px 38px;
     margin-bottom: 20px;
     border-radius: 6px;
+    
 
     &:focus {
       outline: none;
@@ -21,14 +25,31 @@
   }
 
   button {
-    background: linear-gradient(to left, #38ef7d, #11998e);
+    background: linear-gradient(to left, rgb(1, 156, 9), #0f9b0f);
     padding: 10px;
-    border: 1px solid #11998e;
-    font-size: 13px;
+    border: 1px solid #fff;
+    font-size: 18px;
     color: white;
     font-weight: bold;
     margin: auto;
     width: 200px;
     display: block;
+    font-family: "Helvetica";
+    border-radius: 4%;
+  }
+  .icon1,.icon5{
+    position: absolute;
+    left: 51px;
+    font-size: 18px;
+    color:green;
+    width: 22px;
+  }
+  .icon1{
+    top: 305px;
+    left:543px;
+  }
+  .icon5 {
+    top: 365px;
+    left:543px;
   }
 }

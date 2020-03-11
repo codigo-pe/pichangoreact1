@@ -154,6 +154,7 @@ function AuthRegisterGame(props) {
           Registrar
           </Button>
       </Form>
+      <br/>
     </div>
   )
 }
