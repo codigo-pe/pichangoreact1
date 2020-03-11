@@ -80,7 +80,7 @@ class FieldDetail extends React.Component {
                 <img src={mapa} alt="" style={{ margin: "20px" }} />
               </Tab>
               <Tab eventKey="contact" title="Juegos activos">
-                <Table className="table table-sm table-dark">
+                <Table className="table table-sm table-litgh">
                   <thead>
                     <tr>
                       <th scope="col">Fechas</th>

@@ -16,7 +16,7 @@ class AuthRegisterGame extends React.Component {
   handleSubmit(event) {}
 
   componentDidMount() {
-    fetch("http://127.0.0.1:8000/canchaslist/")
+    fetch("http://127.0.0.1:8000/formjuegos/")
       .then(response => response.json())
       .then(json => this.setState({ fields: json }));
   }
@@ -34,7 +34,7 @@ class AuthRegisterGame extends React.Component {
       // </form>
       <div className="registro-juego">
         <h3>Arma tu propia pichanga</h3>
-        <Form>
+        <Form onSubmit={this.handleSubmit}>
           <Form.Row>
             <Form.Group as={Col} controlId="formGridDate">
               <Form.Label>Fecha</Form.Label>

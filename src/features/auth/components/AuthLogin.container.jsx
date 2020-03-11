@@ -21,12 +21,12 @@ class AuthLogin extends React.Component {
           let users = [
             {
               id: 1,
-              username: "ana",
+              username: "eduardo",
               rol: "1"
             },
             {
               id: 2,
-              username: "pepe",
+              username: "gustavo",
               rol: "2"
             },
             {
