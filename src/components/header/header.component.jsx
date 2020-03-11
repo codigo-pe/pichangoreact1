@@ -9,9 +9,9 @@ class Header extends React.Component {
     super(props);
   }
 
-  componentDidMount() {}
+  componentDidMount() { }
 
-  componentWillReceiveProps() {}
+  componentWillReceiveProps() { }
 
   render() {
     console.log("this.context.user", this.context.user);
@@ -27,11 +27,11 @@ class Header extends React.Component {
           {this.context.user ? (
             <NavUser />
           ) : (
-            <>
-              {/* <Link to="/auth/register">Registrarse</Link>&nbsp;&nbsp;&nbsp; */}
+              <>
+                <Link to="/auth/register">Registrarse</Link>&nbsp;&nbsp;&nbsp;
               <Link to="/auth/login">Loguearse</Link>
-            </>
-          )}
+              </>
+            )}
         </div>
       </header>
     );
